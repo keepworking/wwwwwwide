@@ -9,11 +9,13 @@
 </head>
 <body>
   <style>
-  body {
+  /* setting header to drag able */
+  header.mdl-layout__header {
     -ms-overflow-style: scrollbar;
     -webkit-app-region:drag;
   }
   .mdl-layout__drawer-button,
+  .mdl-layout__drawer,
   input[type="submit"],
   input[type="reset"],
   input[type="button"],
@@ -23,41 +25,47 @@
   textarea {
     -webkit-app-region: no-drag;
   }
-  .demo-layout-transparent {
-    background: url('./background.jpg') center / cover;
-  }
-  .demo-layout-transparent .mdl-layout__header,
-  .demo-layout-transparent .mdl-layout__drawer-button {
-    /* This background is dark, so we set text to white. Use 87% black instead if
-    your background is light. */
-    color: white;
-  }
+
+
+
+
 </style>
 
-<div class="demo-layout-transparent mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--transparent">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">hello</span>
+      <span class="mdl-layout-title">WWWWWWIDE</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="javascript:window.close()">close</a>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="javascript:window.close()">Close</a>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Menu</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="javascript:window.close()">close</a>
+      <!-- <a class="mdl-navigation__link" href="">Link</a> -->
+      <a class="mdl-navigation__link" href="javascript:window.close()">Close</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
+
+    <div class="page-content"><!-- Your content goes here -->
+      <!-- content start -->
+      <div id="openfile">openfile</div>
+      <br>
+      <div id="convertfile">convertfile</div>
+      <br>
+
+      <!-- contetn end -->
+    </div>
   </main>
 </div>
+
+<script src="./render.js"></script>
+
 </body>
 </html>
