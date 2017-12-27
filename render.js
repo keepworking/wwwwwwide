@@ -34,7 +34,6 @@ ipc.on('openedfile',function (event,path) {
       preview.src = src
       imgView.innerHTML = ''
       imgView.appendChild(preview)
-      img.null
     })
   })
 
@@ -52,7 +51,7 @@ convertBtn.addEventListener('click',function () {
   worker.onmessage = function(e){
     loading.style['visibility'] = "hidden"
     console.log(e.data)
-    worker.close();
+    worker.terminate();
   }
   worker.postMessage({'targetPath':targetpath,'size':size});
 
