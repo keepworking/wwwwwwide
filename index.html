@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>wwwwwwide</title>
-  <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
+  <link rel="stylesheet" href="./material.min.css">
   <script src="./node_modules/material-design-lite/material.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -26,9 +26,11 @@
     -webkit-app-region: no-drag;
   }
 
-
-
-
+  #imgView img {
+    width: 100%;
+    height:300px;
+    object-fit: scale-down;
+  }
 </style>
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -55,10 +57,25 @@
 
     <div class="page-content"><!-- Your content goes here -->
       <!-- content start -->
-      <div id="openfile">openfile</div>
-      <br>
-      <div id="convertfile">convertfile</div>
-      <br>
+      <div class="mdl-grid">
+        <div id="imgView" class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
+
+        </div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone">
+          <button id="openfile" class="mdl-button mdl-js-button">
+            OPEN
+          </button>
+          <button id="convertfile" id="openfile" class="mdl-button mdl-js-button">
+            CONVERT
+          </button>
+          <br>
+          <div id="loading">
+            <div class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+          </div>
+        </div>
+      </div>
+
+
 
       <!-- contetn end -->
     </div>
