@@ -15,7 +15,7 @@
   "author": "keepworking , hongyevgeny",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^1.7.10"
+    "electron": "^1.8.1"
   },
   "dependencies": {
     "electron-workers": "^1.10.3",
