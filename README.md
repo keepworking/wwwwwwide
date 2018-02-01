@@ -18,6 +18,8 @@ OPEN 버튼을 열고 파일 탐색기를 통해 수정하고자 하는 이미�
 이때 변환된 이미지는 원본 이미지를 덮어씌웁니다.
 화면 사이즈는 메인디스플레이 기준으로 인식이 됩니다.
 
-# 다운로드
+# Download
 
-배포를 준비중입니다.
+[windows x64](https://github.com/keepworking/wwwwwwide/releases/download/1.0/win64.wwwwwwide.Setup.1.0.0.exe)
+
+[windows x32](https://github.com/keepworking/wwwwwwide/releases/download/1.0/win32.wwwwwwide.Setup.1.0.0.exe)
