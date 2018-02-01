@@ -52,7 +52,7 @@ convertBtn.addEventListener('click',function () {
   worker.onmessage = function(e){
     loading.style['visibility'] = "hidden"
     console.log(e.data)
-    worker.close();
+    // worker.close();
   }
   worker.postMessage({'targetPath':targetpath,'size':size});
 

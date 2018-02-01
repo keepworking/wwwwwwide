@@ -1,6 +1,9 @@
 
 const jimp = require('jimp')
 
+var baseImage
+var backImg
+var frontImg
 
 self.addEventListener("message", function(e) {
     targetPath = e.data['targetPath']
@@ -8,9 +11,9 @@ self.addEventListener("message", function(e) {
     console.log(e.data)
 
     jimp.read(targetPath).then(function (target) {
-      var baseImage = new jimp(size.width,size.height,0xFFFFFFFF)
-      var backImg = target.clone();
-      var frontImg = target.clone();
+      baseImage = new jimp(size.width,size.height,0xFFFFFFFF)
+      backImg = target.clone();
+      frontImg = target.clone();
       // RESIZE_NEAREST_NEIGHBOR so bad
       // RESIZE_BILINEAR 위보단 나음
       // RESIZE_BICUBIC bilinear 비슷

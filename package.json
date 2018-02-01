@@ -2,20 +2,57 @@
   "name": "wwwwwwide",
   "version": "1.0.0",
   "description": "wallpapar jenarater for wwwwwwide screens like 21:9",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "electron .",
-    "start": "electron ."
+    "start": "electron .",
+    "build:linux": "npm run build:linux32 && npm run build:linux64",
+    "build:linux32": "build --linux --ia32",
+    "build:linux64": "build --linux --x64",
+    "build:win": "npm run build:win32 && npm run build:win64",
+    "build:win32": "build --win --ia32",
+    "build:win64": "build --win --x64"
   },
   "keywords": [
     "wide",
     "screen",
     "wallpaper"
   ],
+  "build": {
+    "productName": "wwwwwwide",
+    "appId": "org.sgnhi.wwwwwwide",
+    "asar": true,
+    "protocols" : {
+        "name" : "wwwwwwide",
+        "schemes" : ["wwwwwwide"]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "zip",
+        "tar.gz"
+      ]
+    },
+    "nsis":{
+      "oneClick" : false,
+      "allowToChangeInstallationDirectory" :true
+    },
+    "directories": {
+      "output": "dist/",
+      "app": "."
+    }
+  },
   "author": "keepworking , hongyevgeny",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^1.8.2-beta.4"
+    "electron": "^1.8.2-beta.4",
+    "electron-builder": "^19.55.3"
   },
   "dependencies": {
     "electron-workers": "^1.10.3",
