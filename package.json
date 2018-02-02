@@ -21,13 +21,16 @@
     "productName": "wwwwwwide",
     "appId": "org.sgnhi.wwwwwwide",
     "asar": true,
-    "protocols" : {
-        "name" : "wwwwwwide",
-        "schemes" : ["wwwwwwide"]
+    "protocols": {
+      "name": "wwwwwwide",
+      "schemes": [
+        "wwwwwwide"
+      ]
     },
     "win": {
       "target": [
-        "nsis"
+        "nsis",
+        "portable"
       ]
     },
     "linux": {
@@ -39,9 +42,9 @@
         "tar.gz"
       ]
     },
-    "nsis":{
-      "oneClick" : false,
-      "allowToChangeInstallationDirectory" :true
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     },
     "directories": {
       "output": "dist/",
