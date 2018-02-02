@@ -20,6 +20,5 @@ OPEN 버튼을 열고 파일 탐색기를 통해 수정하고자 하는 이미�
 
 # Download
 
-[windows x64](https://github.com/keepworking/wwwwwwide/releases/download/1.0/win64.wwwwwwide.Setup.1.0.0.exe)
-
-[windows x32](https://github.com/keepworking/wwwwwwide/releases/download/1.0/win32.wwwwwwide.Setup.1.0.0.exe)
+준비중 입니다.
+[릴리즈 링크](https://github.com/keepworking/wwwwwwide/releases)
