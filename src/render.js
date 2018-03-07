@@ -5,15 +5,12 @@ const ipc = electron.ipcRenderer
 const Screen = electron.screen
 const nativeImage = electron.nativeImage
 
-
 const size = Screen.getPrimaryDisplay().size
-
 
 const openBtn = document.getElementById('openfile')
 const convertBtn = document.getElementById('convertfile')
 const loading = document.getElementById('loading')
 const imgView = document.getElementById('imgView')
-
 
 loading.style['visibility'] = "hidden"
 
@@ -40,7 +37,6 @@ ipc.on('openedfile',function (event,path) {
 
 })
 
-
 convertBtn.addEventListener('click',function () {
   if(targetPath === null){
     return
@@ -57,9 +53,6 @@ convertBtn.addEventListener('click',function () {
   worker.postMessage({'targetPath':targetpath,'size':size});
 
 })
-
-
-
 
 ipc.on('converted',function (event) {
   loading.style['visibility'] = "hidden"
